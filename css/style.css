@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    background: url('/img/zemf_cover.jpg') center top/cover no-repeat;
+}
+
+.cover {
+    min-height: 660px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+	align-items: flex-start;
+}
+.cover h1{
+    color: #e30000;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 500;
+	
+}
+.cover span{
+    color: #ffffff;
+    text-align: left;
+}
+
+h2{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.bio .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bio_items{
+    display: flex;
+}
+
+.bio_item{
+    cursor: pointer;
+    transition: .3s all;
+    padding: 10px;
+}
+
+.bio_item__active{
+    background-color: #e30000;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.bio_card{
+    height: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.bio_img{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 50px 50px 50px 0;
+}
+
+.bio_descr {
+    margin: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 16px;
+}
+
+.album_subtitle{
+    font-weight: 10px;
+    color: #888888;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.album_img{
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.albums_cards{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.album_img img{
+    width: 100%;
+}
+.selected {
+    transform: scale(1.05);
+}
+
+.album_content_item {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1050;
+    display:none;
+    width:100%;
+    height:100%;
+    overflow: auto;
+    background-color:rgba(0,0,0,.5);
+}
+.album_content_list{
+    display:block;
+    background-color:#ffffff;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+    margin: auto;
+    font-size: 18px;
+    padding: 20px;
+}
+.album_content ol{
+    margin: 20px 70px;
+}
+.album_content h3{
+    text-align: center;
+    margin-top: 10px;
+}
+.content__close {
+    margin: 0 12px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+}
+
+.gallery_items {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery_item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+}
+.prev_btn img, .next_btn img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.video iframe{
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: 600px;
+}
+footer{
+    margin-top: 50px;
+    background-color: black;
+    min-height: 60px;
+}
+footer .container{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 1140px; 
+        margin: 0 auto;
+    }
+
+    .cover h1 {
+        font-size: 130px;
+    }
+
+    .cover span {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+    .bio_cards{
+        min-height: 420px;
+    }
+    .bio_item {
+        font-size: 40px;
+    }
+    .bio_items{
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .bio_card {
+        width: 900px;
+    }
+
+    .bio_card img {
+        width: 250px;
+    }
+    .albums_cards{
+        min-height: 400px;
+    }
+    .album_img {
+        height: 350px;
+        width: 350px;
+    }
+    .album_content_list{
+        height: 500px;
+        width: 500px;
+    }
+
+    .selected .album_img {
+        height: 365px;
+        width: 365px;
+    }
+
+    .gallery_item {
+        height: 450px;
+        width: 450px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .cover h1 {
+        font-size: 100px;
+    }
+    .cover span {
+        font-size: 30px;
+    }
+
+    .bio_card {
+        width: 100%;
+    }
+
+    .bio_card img {
+        width: 150px;
+    }
+    .bio_descr {
+        margin: auto 50px;
+        font-size: 10px;
+    }
+    .album_img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .selected .album_img {
+        height: 215px;
+        width: 215px;
+    }
+    .albums_cards {
+        justify-content: space-around;
+    }
+    .gallery_item {
+        height: 400px;
+        width: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .cover {
+        min-height: 500px;
+        padding: 100px 0 50px 0;
+    }
+
+    .cover h1 {
+        font-size: 50px;
+    }
+
+    .cover span {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    .bio_card {
+        width: 100%;
+    }
+
+    .bio_card img {
+        width: 150px;
+    }
+
+    .bio_descr {
+        margin: auto 20px;
+        font-size: 10px;
+    }
+    .albums_cards {
+        min-height: 650px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .album_img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .selected .album_img {
+        height: 215px;
+        width: 215px;
+    }
+
+    .gallery_item {
+        height: 250px;
+        width: 250px;
+    }
+
+    .video .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+    .album_subtitle{
+        font-size: 10px;
+    }
+    .album_content_item {
+        padding: 10px;
+        width: 100%;
+    }
+    .album_content_list{
+        padding: 10px;
+        height: 600px;
+        width: 500px;
+    }
+
+    .album_content_item h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .album_content_item ol li {
+        font-size: 16px;
+        margin: 3px 0;
+    }
+    .album_content_item ol {
+        max-height: 60vh; 
+        overflow-y: auto; 
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px), (max-width: 768px){
+    .bio_items {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    .bio .container {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .bio_item {
+        font-size: 20px;
+        width: 100%;
+    }
+    .bio_img {
+        padding: 20px;
+    }
+}
