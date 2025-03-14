@@ -379,6 +379,9 @@ footer a{
         max-height: 60vh; 
         overflow-y: auto; 
     }
+	footer a{
+        font-size: 13px;
+    }
 }
 @media (min-width: 768px) and (max-width: 1024px), (max-width: 768px){
     .bio_items {
